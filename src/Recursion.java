@@ -1,9 +1,11 @@
 public class Recursion {
     public static void main(String[] args) {
         int n = 7;
-        //printDecreasing(n);
-        System.out.println("----");
-       // printIncreasing(n);
+        System.out.println("---- printDecreasing ----");
+        printDecreasing(n);
+        System.out.println("---- printIncreasing ----");
+        printIncreasing(n);
+        System.out.println("---- printBothway ----");
         printBothway(n);
     }
 
