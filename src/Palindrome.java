@@ -1,6 +1,6 @@
 public class Palindrome {
     public static void main(String[] args) {
-        String input = "nitin";
+        String input = "a";
         int left = 0;
         int right = input.length() - 1;
         boolean isPalindrome = true;
