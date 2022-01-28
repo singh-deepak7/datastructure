@@ -6,7 +6,6 @@ public class ArrayReverse {
         System.out.println("Before");
         Arrays.stream(inputArray).forEach(x -> System.out.print(x + " "));
         reverse(inputArray, 0, inputArray.length-1);
-
     }
 
     private static void reverse(int[] inputArray, int left, int right) {
