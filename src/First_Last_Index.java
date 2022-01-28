@@ -43,13 +43,14 @@ public class First_Last_Index {
         if (arr.length == index) {
             return new int[fsf];
         }
-        if (arr[index] == digit) {
+        if( arr[index] == digit){
             fsf += 1;
         }
         int[] faith = AllIndex(arr, digit, index + 1, fsf);
-        if (arr[index] == digit) {
-            faith[fsf - 1] = index;
+        if( arr[index] == digit){
+            faith[fsf -1] = index;
         }
         return faith;
     }
+
 }
