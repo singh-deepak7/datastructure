@@ -39,6 +39,7 @@ public class First_Last_Index {
         return arr[index] == digit ? index : LastIndex(arr, digit, index - 1);
     }
 
+    //recursion
     private static int[] AllIndex(int[] arr, int digit, int index, int fsf) {
         if (arr.length == index) {
             return new int[fsf];
