@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class GetSubSequence {
     public static void main(String[] args) {
-        String str = "abcd";
-        ArrayList<String> answer  = getSss(str);
+        String str = "abc";
+        ArrayList<String> answer = getSss(str);
         System.out.println(answer.toString());
     }
 
@@ -16,8 +16,11 @@ public class GetSubSequence {
         }
         ArrayList<String> faith = getSss(str.substring(1));
         ArrayList<String> ans = new ArrayList<>(faith);
+      /*  for (String s : faith) {
+            ans.add(s); // denies to be part of
+        }*/
         for (String s : faith) {
-            ans.add(str.charAt(0) + s);
+            ans.add(str.charAt(0) + s);// agrees
         }
         return ans;
     }
