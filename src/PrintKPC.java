@@ -16,10 +16,9 @@ public class PrintKPC {
             System.out.println(ans);
             return;
         }
-        int val = str.charAt(0) - '0';
-        String roq = str.substring(1);
-        for (int i = 0; i < arr[val].length(); i++) {
-            printKPC(roq, ans + arr[val].charAt(i));
+        int word = str.charAt(0) - '0';
+        for (int i = 0; i < arr[word].length(); i++) {
+            printKPC(str.substring(1), ans + arr[word].charAt(i));
         }
 
     }
