@@ -30,6 +30,7 @@ public class MazePath {
         //vertical
         ArrayList<String> vertical = getMazePaths(sr + 1, sc, dr, dc);
         for(String s: vertical) ans.add("v" + s);
+
         return ans;
     }
 
