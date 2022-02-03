@@ -15,7 +15,7 @@ public class NQueens {
         }
 
         for (int col = 0; col < chess.length; col++) {
-            if (isSafeToPlace(chess, row, col) == true) {
+            if (isSafeToPlace(chess, row, col)) {
                 chess[row][col] = 1;
                 printNQueens(chess, (qsf + row + "-" + col + ", "), row + 1);
                 chess[row][col] = 0;
