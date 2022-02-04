@@ -165,7 +165,7 @@ public class LinkedList_1 {
         public void reverseDI() {
             int li = 0;
             int ri = size - 1;
-            while(li < ri){
+            while (li < ri) {
                 Node left = getNodeAt(li);
                 Node right = getNodeAt(ri);
 
@@ -178,8 +178,20 @@ public class LinkedList_1 {
             }
         }
 
-        public void reversePI(){
+        public void reversePI() {
             // write your code here
+            Node prev = null;
+            Node cur = head, fwd;
+
+            while (cur != null) {
+                fwd = cur.next;
+                cur.next = prev;
+                prev = cur;
+                cur = fwd;
+            }
+            tail = head;
+            head = prev;
+
         }
     }
 
@@ -226,9 +238,9 @@ public class LinkedList_1 {
             } else if (str.startsWith("removeAt")) {
                 int idx = Integer.parseInt(str.split(" ")[1]);
                 list.removeAt(idx);
-            } else if(str.startsWith("reverseDI")){
+            } else if (str.startsWith("reverseDI")) {
                 list.reverseDI();
-            } else if(str.startsWith("reversePI")){
+            } else if (str.startsWith("reversePI")) {
                 list.reversePI();
             }
             str = br.readLine();
