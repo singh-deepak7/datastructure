@@ -33,7 +33,7 @@ class Solution {
     public static void main(String[] args) {
         String str = "test";
 
-        Solution main = new Solution();
-        System.out.println(main.combinationCount("test"));
+        //solution main = new solution();
+       // System.out.println(main.combinationCount("test"));
     }
 }
