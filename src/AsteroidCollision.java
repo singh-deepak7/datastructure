@@ -9,7 +9,7 @@ https://leetcode.com/problems/asteroid-collision/submissions/
     */
 }
 
-class Solution {
+class Solution1 {
     public int[] asteroidCollision(int[] asteroids) {
         Stack<Integer> st = new Stack<>();
         for (int i : asteroids) {

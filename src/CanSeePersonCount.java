@@ -9,7 +9,7 @@ public class CanSeePersonCount {
 }
 
 
-class Solution {
+class Solution2 {
     public int[] canSeePersonsCount(int[] heights) {
         Stack<Integer> st = new Stack<>();
         int n = heights.length;

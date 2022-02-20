@@ -10,7 +10,7 @@ public class SimplifyPath {
 }
 
 
-class Solution {
+class Solution3 {
     public String simplifyPath(String path) {
         Stack<String> st = new Stack<>();
         for (String s : path.split("/")) {

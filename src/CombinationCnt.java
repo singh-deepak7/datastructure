@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+class Solution5 {
     Map<String, Integer> map;
 
     public int combinationCount(String s) {
