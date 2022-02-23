@@ -44,10 +44,10 @@ public class GenericTree {
         return root;
     }
 
-    public static int size(Node node){
+    public static int size(Node node) {
         // write your code here
         int s = 1;
-        for( Node child: node.children){
+        for (Node child : node.children) {
             s += size(child);
         }
         return s;
@@ -56,7 +56,7 @@ public class GenericTree {
     public static int height(Node node) {
         // write your code here
         int height = -1;
-        for( Node child: node.children){
+        for (Node child : node.children) {
             height = Math.max(height, height(child));
         }
         return height + 1;
@@ -66,52 +66,60 @@ public class GenericTree {
         // write your code here
         int maxS = 0;
         for (Node child : node.children) {
-            maxS =  Math.max(maxS, max(child));
+            maxS = Math.max(maxS, max(child));
         }
         return Math.max(maxS, node.data);
     }
 
-    public static void traversals(Node node){
+    public static void traversals(Node node) {
         // write your code here
-        System.out.println("Node Pre "+ node.data);
+        System.out.println("Node Pre " + node.data);
         for (Node child : node.children) {
-            System.out.println("Edge Pre "+ node.data + "--" + child.data);
+            System.out.println("Edge Pre " + node.data + "--" + child.data);
             traversals(child);
-            System.out.println("Edge Post "+ node.data + "--" + child.data);
+            System.out.println("Edge Post " + node.data + "--" + child.data);
         }
-        System.out.println("Node Post "+ node.data);
+        System.out.println("Node Post " + node.data);
 
     }
 
-    public static void levelOrder(Node node){
+    public static void levelOrder(Node node) {
         // write your code here
-        Queue<Node> que =  new LinkedList<>();
+        Queue<Node> que = new LinkedList<>();
         que.add(node);
-        while(!que.isEmpty()){
+        while (!que.isEmpty()) {
             Node out = que.remove();
             System.out.print(out.data + " ");
-            for(Node child: out.children) que.add(child);
+            for (Node child : out.children) que.add(child);
 
         }
         System.out.println(".");
 
     }
 
-    public static void levelOrderLinewise(Node node){
+    public static void levelOrderLinewise(Node node) {
         // write your code here
-        Queue<Node> que =  new LinkedList<>();
+        Queue<Node> que = new LinkedList<>();
         que.add(node);
-        while(!que.isEmpty()){
+        while (!que.isEmpty()) {
             int s = que.size();
 
-            for(int i=0; i < s ; i ++){
+            for (int i = 0; i < s; i++) {
                 Node out = que.remove();
                 System.out.print(out.data + " ");
-                for(Node child: out.children) que.add(child);
+                for (Node child : out.children) que.add(child);
 
             }
             System.out.println();
         }
+    }
+
+    public static void mirror(Node node) {
+        // write your code here
+        for (Node child : node.children) {
+            mirror(child);
+        }
+        Collections.reverse(node.children);
     }
 
     public static void main(String[] args) throws Exception {
@@ -137,6 +145,8 @@ public class GenericTree {
 
         levelOrder(root);
         levelOrderLinewise(root);
+
+        mirror(root);
 
         // display(root);
         // input :  12
