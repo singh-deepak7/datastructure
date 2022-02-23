@@ -122,6 +122,24 @@ public class GenericTree {
         Collections.reverse(node.children);
     }
 
+    public static void linearize(Node node) {
+        // write your code here
+        for (Node child : node.children) {
+            linearize(child);
+        }
+        while (node.children.size() > 1) {
+            Node last = node.children.remove(node.children.size() - 1);
+            Node secLast = node.children.get(node.children.size() - 1);
+            getTail(secLast).children.add(last);
+        }
+
+    }
+
+    public static Node getTail(Node node) {
+        while (node.children.size() != 0) node = node.children.get(0);
+        return node;
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -148,6 +166,8 @@ public class GenericTree {
 
         mirror(root);
 
+        linearize(root);
+        display(root);
         // display(root);
         // input :  12
         //10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
