@@ -83,6 +83,37 @@ public class GenericTree {
 
     }
 
+    public static void levelOrder(Node node){
+        // write your code here
+        Queue<Node> que =  new LinkedList<>();
+        que.add(node);
+        while(!que.isEmpty()){
+            Node out = que.remove();
+            System.out.print(out.data + " ");
+            for(Node child: out.children) que.add(child);
+
+        }
+        System.out.println(".");
+
+    }
+
+    public static void levelOrderLinewise(Node node){
+        // write your code here
+        Queue<Node> que =  new LinkedList<>();
+        que.add(node);
+        while(!que.isEmpty()){
+            int s = que.size();
+
+            for(int i=0; i < s ; i ++){
+                Node out = que.remove();
+                System.out.print(out.data + " ");
+                for(Node child: out.children) que.add(child);
+
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -103,6 +134,9 @@ public class GenericTree {
         System.out.println(m);
 
         traversals(root);
+
+        levelOrder(root);
+        levelOrderLinewise(root);
 
         // display(root);
         // input :  12

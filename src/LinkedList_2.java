@@ -1,4 +1,4 @@
-class LinkedList {
+class LinkedList_2 {
 
     Node head;
 
@@ -74,7 +74,7 @@ class LinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList linkedlist = new LinkedList();
+        LinkedList_2 linkedlist = new LinkedList_2();
 
         /* Constructed Linked List is 1->2->3->4->5->null */
         linkedlist.push(5);
