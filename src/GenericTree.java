@@ -71,6 +71,18 @@ public class GenericTree {
         return Math.max(maxS, node.data);
     }
 
+    public static void traversals(Node node){
+        // write your code here
+        System.out.println("Node Pre "+ node.data);
+        for (Node child : node.children) {
+            System.out.println("Edge Pre "+ node.data + "--" + child.data);
+            traversals(child);
+            System.out.println("Edge Post "+ node.data + "--" + child.data);
+        }
+        System.out.println("Node Post "+ node.data);
+
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -89,6 +101,8 @@ public class GenericTree {
 
         int m = max(root);
         System.out.println(m);
+
+        traversals(root);
 
         // display(root);
         // input :  12
