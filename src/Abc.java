@@ -43,5 +43,10 @@ public class Abc {
         System.out.println(sb1.toString());
 
 
+        String in = "wwwwaaadexxxxxx";
+        for(char c : in.toCharArray()){
+            System.out.println(c);
+        }
+
     }
 }
