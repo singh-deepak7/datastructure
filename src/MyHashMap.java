@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+/*https://leetcode.com/problems/design-hashmap/*/
+
 class MyHashMap {
     int[] data;
 
