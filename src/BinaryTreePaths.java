@@ -21,7 +21,7 @@ public class BinaryTreePaths {
      * Your input  [1,2,3,null,5]
      * Output  ["1->2->5","1->3"]
      */
-    class Solution {
+  /*  class Solution {
         public List<String> binaryTreePaths(TreeNode root) {
             List<String> ans = new ArrayList<>();
             helper(root, "", ans);
@@ -37,5 +37,5 @@ public class BinaryTreePaths {
             }
             helper(root.left, ans + root.val + "->", al);
             helper(root.right, ans + root.val + "->", al);
-        }
+        }*/
     }
